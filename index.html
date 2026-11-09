@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Course of Fire and Freebore</title>
+<meta name="description" content="Support pages for the Course of Fire and Freebore apps.">
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; background: #f1f5f9; color: #0f172a; font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  header { background: #0f172a; color: #fff; padding: 28px 20px; }
+  header h1 { margin: 0 auto; max-width: 760px; font-size: 26px; }
+  header p { margin: 4px auto 0; max-width: 760px; color: #cbd5e1; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 20px 48px; }
+  .card { background: #fff; border: 1px solid #dae1ea; border-radius: 12px; padding: 4px 20px 20px; margin-top: 20px; }
+  h2 { font-size: 19px; margin: 22px 0 6px; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  a { color: #2563eb; }
+  #sent { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Support</h1>
+  <p>Course of Fire and Freebore, by Michael Leaf</p>
+</header>
+<main>
+<div class="card" id="sent">
+  <h2>Message sent</h2>
+  <p>Thanks. Your message is on its way, and any reply will come to the email address you entered.</p>
+</div>
+<div class="card">
+  <h2>Support pages</h2>
+  <ul>
+    <li><a href="https://longrange308.github.io/freebore-feedback/">Freebore — beta feedback</a></li>
+    <li><a href="https://longrange308.github.io/cof_android/">Course of Fire — Android support</a></li>
+    <li><a href="https://longrange308.github.io/cof_ios/">Course of Fire — iPhone support</a></li>
+  </ul>
+  <h2>Privacy</h2>
+  <ul>
+    <li><a href="https://longrange308.github.io/freebore-privacy/">Freebore privacy policy</a></li>
+    <li><a href="https://svthuh.github.io/course-of-fire-privacy/">Course of Fire privacy policy</a></li>
+  </ul>
+</div>
+</main>
+<script>
+  // The contact forms use FormSubmit, which returns visitors here after its "I'm not a robot" check.
+  // Show the confirmation when they arrive from FormSubmit (or with ?sent in the address).
+  if (/formsubmit\.co/i.test(document.referrer) || /[?&]sent\b/.test(location.search)) {
+    document.getElementById('sent').style.display = 'block';
+    document.getElementById('title').textContent = 'Message sent';
+    document.title = 'Message sent';
+  }
+</script>
+</body>
+</html>
